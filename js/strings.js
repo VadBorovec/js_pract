@@ -30,3 +30,30 @@ const quantity = 5;
 const orderMsg = `Ви замовляєте ${quantity} холодильників`;
 
 console.log(orderMsg);
+
+// нормалізація з методом toLoverCase()
+
+let brand = 'Samsung';
+brand = brand.toLowerCase();
+
+console.log(brand);
+
+// пошук в рядку з методом includes()
+
+const blacklistedWord1 = 'спам';
+const blacklistedWord2 = 'розпродаж';
+
+const string1 = 'Привіт, це принц Абдул, це не спам, пропоную тобі мільйон';
+const string2 = 'Найбільш велиикий РОЗПРОДАЖ на цьому тижні, не пропусти';
+const string3 = 'Рекламна компанія #fatlivesmatter';
+
+console.log(string1.includes(blacklistedWord1));
+console.log(string1.includes(blacklistedWord2));
+
+console.log(string2.includes(blacklistedWord1));
+
+const normalizedString2 = string2.toLowerCase();
+console.log(normalizedString2.includes(blacklistedWord2));
+
+console.log(string3.toLowerCase().includes(blacklistedWord1));
+console.log(string3.toLowerCase().includes(blacklistedWord2));
