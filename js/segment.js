@@ -9,8 +9,11 @@ const x1 = 10;
 const x2 = 30;
 const number = 50;
 
-// console. log( "Число ${number) попадает 8 отрезок до ${x1}? .:):
-// console. Log( "Число ${number) попадает 8 отрезок после ${x2]? J:
-// console. Log( - Число ${number) попадает 8 отрезок от $(x1) до ${x2}? 1:
-// console. log(
-//    Число ${number) попадает в отрезок до $(x1) или после ${x2}?
+console.log(`Число ${number} попадает 8 отрезок до ${x1}?`, number < x1);
+console.log(`Число ${number} попадает 8 отрезок после ${x2}?`, number > x2);
+
+const res = number > x1 && number < x2;
+console.log(`Число ${number} попадает 8 отрезок от ${x1} до ${x2}?`, res);
+
+const res2 = number < x1 || number > x2;
+console.log(`Число ${number} попадает в отрезок до ${x1} или после ${x2}?`, res2);
