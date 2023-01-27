@@ -14,5 +14,13 @@ console.log('Price', totalPrice);
 
 // Оператор typeof
 
+const type = typeof (isOpen);
+
+console.log(type);
     
 // Как window.alert() блакирует интерпретацию
+
+// console.log('Before');
+// alert('Alert Message');
+// console.log('After');
+ 
