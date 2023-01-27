@@ -2,7 +2,7 @@
 // - Есть три типа подписки: free, pro и vip.
 // - Получить доступ могут только пользователи pro и vip
 
-const subscription = 'pro';
+const sub = 'pro';
 
-//  const canAccessContent = ;
-// console.log('Есть доступ K контенту? ', canAccessContent);
+ const canAccessContent = sub === 'pro' || sub === 'vip';
+console.log('Есть доступ K контенту? ', canAccessContent);
