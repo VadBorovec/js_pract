@@ -49,18 +49,33 @@ console.log('totalSalary', totalSalary);
 // два чётных числа - 2 и 4, их сумма 6
 
 // 1. Записати перемінні
-const min = 3;
-const max = 13;
+// const min = 3;
+// const max = 13;
+// let total = 0;
+// // 2. Перебрати числа з проміжку в циклі
+// for (let i = min; i <= max; i += 1) {
+//     // 3. Перевіряємо залишок від ділення
+//     if (i % 2 === 0) {
+//         console.log('парне', i);
+//         // 4. Записуємо суму
+//         total += i;
+//     } 
+// }
+// // 5. Консоль Лог
+// console.log('total', total);
+
+// OR
+
+const min = 0;
+const max = 5;
 let total = 0;
-// 2. Перебрати числа з проміжку в циклі
 for (let i = min; i <= max; i += 1) {
-    // console.log(i);
-    // 3. Перевіряємо залишок від ділення
-    if (i % 2 === 0) {
-        console.log('парне', i);
-        // 4. Записуємо суму
-        total += i;
-    } 
+    // 3. Пропкскаємо не парні
+    if (i % 2 !== 0) {
+        console.log('не парні', i);
+        continue;
+    }
+    console.log('парне', i);
+    total += i;
 }
-// 5. Консоль Лог
 console.log('total', total);
