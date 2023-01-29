@@ -13,7 +13,7 @@
 // - В результате вывести сообщение
 // «Оформляем заказ на сумму[сумма] со скидкой[скидка] %»
 
-const totalSpent = 50;
+let totalSpent = 5000;
 let payment = 500;
 let discount = 0;
 if (totalSpent >= 100 && totalSpent < 1000) {
@@ -28,8 +28,11 @@ if (totalSpent >= 100 && totalSpent < 1000) {
 } else {
     console.log('У вас еще нет партнерской скидки');
 }
+payment = payment - payment * discount;
+console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100} %`);
 
-console.log(`Оформляем заказ на сумму ${totalSpent} со скидкой ${discount * 100} %`);
+totalSpent += payment;
+console.log(`Всього втирачено ${totalSpent}`);
 
 
 // 'Бронзовый партнер, скидка 2%'
