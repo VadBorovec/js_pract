@@ -28,7 +28,10 @@ if (totalSpent >= 100 && totalSpent < 1000) {
 } else {
     console.log('У вас еще нет партнерской скидки');
 }
-payment = payment - payment * discount;
+
+payment -= payment * discount;
+// payment = payment - payment * discount;
+
 console.log(`Оформляем заказ на сумму ${payment} со скидкой ${discount * 100} %`);
 
 totalSpent += payment;
