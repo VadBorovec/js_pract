@@ -61,7 +61,7 @@
 
 // приміняє випадковий кроір для фону
 
-const colors = ['tomato', 'teal', 'orange', 'deeppink', 'skyblue', 'indigo', 'lime'];
+const colors = ['teal', 'indigo', 'tomato', 'maroon', 'plum', 'cyan', 'violet', 'skyblue', 'orange', 'aquamarine'];
 const max = colors.length - 1;
 const min = 0;
 
@@ -71,3 +71,4 @@ const color = colors[index];
 console.log(color);
 
 document.body.style.backgroundColor = color;
+ 

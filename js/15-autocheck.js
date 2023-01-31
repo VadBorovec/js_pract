@@ -610,28 +610,288 @@
 // Виклик getSubscriptionPrice("organization") повертає число 50
 // Виклик getSubscriptionPrice("starter") повертає число 0
 
-function getSubscriptionPrice(type) {
-  let price;
-  // Change code below this line
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
 
- switch () { // Change this line
-    case : // Change this line
-      price = ; // Change this line
-      break;
+//  switch (type) { // Change this line
+//    case "professional" : // Change this line
+//       price = 20; // Change this line
+//       break;
 
-    case : // Change this line
-      price = ; // Change this line
-      break;
+//     case "organization" : // Change this line
+//       price = 50; // Change this line
+//       break;
 
-    case : // Change this line
-      price = ; // Change this line
-      break;
-  }
+//     case "starter" : // Change this line
+//       price = 0; // Change this line
+//       break;
+//   }
 
-  // Change code above this line
-  return price;
-}
+//   // Change code above this line
+//   return price;
+// }
 
+// let result = getSubscriptionPrice("organization");
+// console.log(result);
+// result = getSubscriptionPrice("professional");
+// console.log(result);
+// result = getSubscriptionPrice("starter");
+// console.log(result);
 
-let result = checkPassword("jqueryismyjam");
-console.log(result);
+// ==============================================================================
+
+// 28
+
+// Функція checkPassword(password) отримує пароль в параметр password, перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
+
+// Якщо значення параметра password:
+
+// дорівнює null, значить користувач скасував операцію і в message записується рядок "Canceled by user!".
+// збігається зі значенням ADMIN_PASSWORD, у змінну message присвоюється рядок "Welcome!".
+// не задовольняє жодну з попередніх умов, у змінну message записується рядок "Access denied, wrong password!".
+// Зроби рефакторинг коду, замінивши інструкцію if..else на switch, і не забудь про блок default (аналог else).
+
+// Оголошена функція checkPassword(password)
+// Виклик checkPassword("mangohackzor") повертає "Access denied, wrong password!"
+// Виклик checkPassword(null) повертає "Canceled by user!"
+// Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
+// Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+  
+//   switch (password) {
+//     case null:
+//       message = "Canceled by user!";
+//       break;
+    
+//     case ADMIN_PASSWORD:
+//       message = "Welcome!";
+//       break;
+    
+//     default:
+//       message = "Access denied, wrong password!";
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+
+// let result = checkPassword("mangohackzor");
+// console.log(result);
+// result = checkPassword(null);
+// console.log(result);
+// result = checkPassword("polyhax");
+// console.log(result);
+// result = checkPassword("jqueryismyjam");
+// console.log(result);
+
+// ==================================================================================
+
+// 29
+
+// Функція getShippingCost(country) повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат, що зберігається у змінній message. Обов'язково використовуй інструкцію switch.
+
+// Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price>, необхідно підставити відповідні значення.
+
+// Список країн і вартість доставки:
+
+// China - 100 кредитів
+// Chile - 250 кредитів
+// Australia - 170 кредитів
+// Jamaica - 120 кредитів
+// Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country"
+
+// Оголошена функція getShippingCost(country)
+// В тілі функції використана інструкція switch
+// Виклик getShippingCost("Australia") повертає "Shipping to Australia will cost 170 credits"
+// Виклик getShippingCost("Germany") повертає "Sorry, there is no delivery to your country"
+// Виклик getShippingCost("China") повертає "Shipping to China will cost 100 credits"
+// Виклик getShippingCost("Chile") повертає "Shipping to Chile will cost 250 credits"
+// Виклик getShippingCost("Jamaica") повертає "Shipping to Jamaica will cost 120 credits"
+// Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
+
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+//   switch (country) {
+//     case "Australia":
+//       message = `Shipping to ${country} will cost 170 credits`;
+//       break;
+//     case "China":
+//       message = `Shipping to ${country} will cost 100 credits`;
+//       break;
+//     case "Chile":
+//       message = `Shipping to ${country} will cost 250 credits`;
+//       break;
+//     case "Jamaica":
+//       message = `Shipping to ${country} will cost 120 credits`;
+//       break;
+//     default:
+//       message = 'Sorry, there is no delivery to your country';
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+
+// let result = getShippingCost("Australia");
+// console.log(result);
+// result = getShippingCost("Germany");
+// console.log(result);
+// result = getShippingCost("China");
+// console.log(result);
+// result = getShippingCost("Chile");
+// console.log(result);
+// result = getShippingCost("Jamaica");
+// console.log(result);
+// result = getShippingCost("Sweden");
+// console.log(result);
+
+// ==================================================================================================
+
+// 30
+
+// Функція getNameLength(name) приймає ім'я (параметр name) і повертає рядок, в якому вказана його довжина. Доповни шаблонний рядок у змінній message довжиною рядка з параметра name.
+
+// Оголошена функція getNameLength(name)
+// Виклик функції getNameLength("Poly") повертає "Name Poly is 4 characters long"
+// Виклик функції getNameLength("Harambe") повертає "Name Harambe is 6 characters long"
+// Виклик функції getNameLength("Billy") повертає "Name Billy is 5 characters long"
+// Виклик функції getNameLength("Joe") повертає "Name Joe is 3 characters long"
+
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
+
+//   return message;
+// }
+
+// let result = getNameLength("Poly");
+// console.log(result);
+// result = getNameLength("Harambe");
+// console.log(result);
+// result = getNameLength("Billy");
+// console.log(result);
+// result = getNameLength("Joe");
+// console.log(result);
+
+// ================================================================================================
+
+// 31
+
+// Доповни код, присвоївши оголошеним змінним вирази звертання до відповідних елементів або властивостей рядка у змінній course.
+
+// courseTopicLength - довжина рядка.
+// firstElement - перший символ рядка.
+// lastElement - останній символ рядка.
+
+// Оголошена змінна courseTopic
+// Значення змінної courseTopic - це рядок "JavaScript essentials"
+// Оголошена змінна courseTopicLength
+// Значення змінної courseTopicLength - це число 21
+// Оголошена змінна firstElement
+// Значення змінної firstElement - це рядок "J"
+// Оголошена змінна lastElement
+// Значення змінної lastElement - це рядок "s"
+
+// const courseTopic = "JavaScript essentials";
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// let result = courseTopicLength
+// console.log(result);
+// result = firstElement
+// console.log(result);
+// result = lastElement
+// console.log(result);
+
+// // Change code above this line
+
+// =======================================================================================
+
+// 32
+
+// Функція getSubstring(string, length) приймає рядок і повертає підрядок від початку і до length символів. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+
+// string - оригінальний рядок
+// length - кількість символів з початку рядка для підрядка
+// Присвой змінній substring вираз створення підрядка довжиною length символів (від початку) з рядка string.
+
+// Оголошена функція getSubstring(string, length)
+// Виклик функції getSubstring("Hello world", 3) повертає "Hel"
+// Виклик функції getSubstring("Hello world", 6) повертає "Hello"
+// Виклик функції getSubstring("Hello world", 8) повертає "Hello wo"
+// Виклик функції getSubstring("Hello world", 11) повертає "Hello world"
+// Виклик функції getSubstring("Hello world", 0) повертає ""
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length); // Change this line
+
+//   return substring;
+// }
+
+// let result = getSubstring("Hello world", 3);
+// console.log(result);
+// result = getSubstring("Hello world", 6);
+// console.log(result);
+// result = getSubstring("Hello world", 8);
+// console.log(result);
+// result = getSubstring("Hello world", 11);
+// console.log(result);
+// result = getSubstring("Hello world", 0);
+// console.log(result);
+
+// ==================================================================================================
+
+// 33
+
+// Функція formatMessage(message, maxLength) приймає рядок (параметр message) і форматує його, якщо довжина перевищує значення в параметрі maxLength.
+
+// Доповни код функції таким чином, що якщо довжина рядка:
+// не перевищує maxLength, функція повертає його в початковому вигляді.
+// більша за maxLength, то функція обрізає рядок до maxLength символів і додає в кінець три крапки "...", після чого повертає скорочену версію.
+
+// Оголошена функція formatMessage(message, maxLength)
+// Виклик функції formatMessage("Curabitur ligula sapien", 16) повертає "Curabitur ligula..."
+// Виклик функції formatMessage("Curabitur ligula sapien", 23) повертає "Curabitur ligula sapien"
+// Виклик функції formatMessage("Vestibulum facilisis purus nec", 20) повертає "Vestibulum facilisis..."
+// Виклик функції formatMessage("Vestibulum facilisis purus nec", 30) повертає "Vestibulum facilisis purus nec"
+// Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 15) повертає "Nunc sed turpis..."
+// Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 41) повертає "Nunc sed turpis a felis in nunc fringilla"
+
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length > maxLength) {
+//     result = message.slice(0, maxLength) + '...';
+//   } else {
+//     result = message;
+//   }
+
+//   /// Change code above this line
+//   return result;
+// }
+
+// let res = formatMessage("Curabitur ligula sapien", 16);
+// console.log(res);
+// res = formatMessage("Curabitur ligula sapien", 23);
+// console.log(res)
+// res = formatMessage("Vestibulum facilisis purus nec", 20);
+// console.log(res)
+// res = formatMessage("Vestibulum facilisis purus nec", 30);
+// console.log(res)
+// res = formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// console.log(res)
+// res = formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
+// console.log(res)
+
+// ==============================================================================================
+
+// 34
+
