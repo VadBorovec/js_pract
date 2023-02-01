@@ -316,10 +316,21 @@
 // Виклик calculateEngravingPrice("Web-development is creative work", 40) повертає 160
 // Виклик calculateEngravingPrice("Web-development is creative work", 20) повертає 80
 
-// function calculateEngravingPrice(message, pricePerWord) {
-//    // Change code below this line
+function calculateEngravingPrice(message, pricePerWord) {
+   // Change code below this line
+    const array = message.split(' ');
+    // return array.length;
+    return array.length * pricePerWord;
+   // Change code above this line
+}
 
+let res = calculateEngravingPrice("JavaScript is in my blood", 10);
+console.log(res);
+calculateEngravingPrice("JavaScript is in my blood", 20);
+console.log(res);
+calculateEngravingPrice("Web-development is creative work", 40);
+console.log(res);
+calculateEngravingPrice("Web-development is creative work", 20);
+console.log(res);
 
-
-//    // Change code above this line
-// }
+// Запитати в ментора за 11 завдання
