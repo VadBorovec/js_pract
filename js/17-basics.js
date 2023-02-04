@@ -32,7 +32,7 @@
 // let b = a;
 // console.log(a);
 // console.log(b);
-// // значення b не перезаписується 
+// // значення b не перезаписується
 // a = 20;
 // console.log(a);
 // console.log(b);
@@ -56,14 +56,26 @@
 // - for если нужен индекс или нужно изменить элемент массива
 // - for...of - ecлu индекс не нужен и в массиве ничего менять не нужно
 
-const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
-console.table(friends);
-const LastIndex = friends.length - 1;
+//  // Якщо потрібно змінити значення елемента
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// console.table(friends);
+// const LastIndex = friends.length - 1;
 
-for (let i = 0; i <= LastIndex; i += 1) {
-    console.log(friends[i]);
-    friends[i] += '-1'
+// for (let i = 0; i <= LastIndex; i += 1) {
+//     // console.log(friends[i]);
+//     friends[i] += '-1'
+// }
+// console.table(friends);
 
-}
+// // Якщо не потрібно змінювати значення елемента
+// // for (const / let variable of iterable) { }
+// const friends = ['Mango', 'Kiwi', 'Poly', 'Ajax'];
+// // console.table(friends);
 
-console.table(friends);
+// for (let friend of friends) {
+//     console.log(friend);
+//     // friend = friends[i];
+//     // friend += '-1';
+// }
+
+// console.log(friends);
