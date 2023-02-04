@@ -12,10 +12,17 @@
 // console.log('Total', total);
 
 
-// Це ж завдвння через for.. of
-const carts = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
-let total = 0;
-for (let cart of carts) {
-    total += cart;
-}
-console.log('Total', total);
+// // Це ж завдвння через for.. of
+// const carts = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// let total = 0;
+// for (let cart of carts) {
+//     total += cart;
+// }
+// console.log('Total', total);
+
+// // Задача добавити (такс) податок 10%
+// const carts = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// for (let i = 0; i < carts.length; i += 1) { 
+//     carts[i] = Math.round(carts[i] * 1.1);
+// }
+// console.log(carts);
