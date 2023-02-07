@@ -10,18 +10,18 @@
 
 // console.log('Total :', total);
 
-const calculateTotalPrice = function (items) {
-    console.log('items в середині функції :', items);
-    let total = 0;
+// const calculateTotalPrice = function (items) {
+//     console.log('items в середині функції :', items);
+//     let total = 0;
     
-    for (const item of items) {
-        total += item;
-    }
-    return total;
-}
+//     for (const item of items) {
+//         total += item;
+//     }
+//     return total;
+// }
 
-const r1 = calculateTotalPrice([1, 2, 3]);
+// const r1 = calculateTotalPrice([1, 2, 3]);
 
-console.log(`Загальна сума покупок ${r1}`);
-console.log(calculateTotalPrice([5, 10, 15, 20]));
-console.log(calculateTotalPrice([100, 200, 300]));
+// console.log(`Загальна сума покупок ${r1}`);
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
