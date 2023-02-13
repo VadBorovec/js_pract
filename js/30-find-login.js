@@ -33,18 +33,18 @@
 // console.log(findLogin(logins, 'jam41'));
 // console.log(findLogin(logins, 'poly1scute'));
 
-// 3тє рішення
+// // 3тє рішення
 
-const logins = ['mAngoDoge', 'k1wtdab3st', 'poly1scute', 'aj4xth3m4n'];
-const findLogin = function (allLogins, loginToFind) {
-    return allLogins.includes(loginToFind)
-        ? `Пользователь ${loginToFind} найден.`
-        : `Пользователь ${loginToFind} не найден.`;
+// const logins = ['mAngoDoge', 'k1wtdab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+//     return allLogins.includes(loginToFind)
+//         ? `Пользователь ${loginToFind} найден.`
+//         : `Пользователь ${loginToFind} не найден.`;
     
-    // return message;
-};
+//     // return message;
+// };
 
-console.log(findLogin(logins, 'avocod3r'));
-console.log(findLogin(logins, 'k1wtdab3st'));
-console.log(findLogin(logins, 'jam41'));
-console.log(findLogin(logins, 'poly1scute'));
+// console.log(findLogin(logins, 'avocod3r'));
+// console.log(findLogin(logins, 'k1wtdab3st'));
+// console.log(findLogin(logins, 'jam41'));
+// console.log(findLogin(logins, 'poly1scute'));
